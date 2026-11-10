@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - NOIR INK Studio</title>
+    <link rel="stylesheet" href="../css/agendamento-style.css">
+    <meta name="description" content="Agende sua tatuagem ou piercing no NOIR INK Studio. Escolha seu serviço, profissional e horário desejado para solicitar um atendimento personalizado.">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1>NOIR INK</h1>
+            <p>STUDIO · <span class="gold-text">TATTOO &amp; PIERCING</span></p>
+        </div>
+        <nav aria-label="Menu de navegação">
+            <a href="index.html">Início</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="piercings.html">Piercings</a>
+            <a href="equipe.html">Equipe</a>
+            <a href="estudio.html">Estúdio</a>
+            <a href="agendamento.html" aria-current="page">Agendamento</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section class="apresentacao-agendamento">
+            <div class="apresentacao-conteudo">
+                <h2>Agende sua experiência</h2>
+                <p>Escolha o serviço desejado e informe suas preferências. Nossa equipe analisará sua solicitação para proporcionar um atendimento personalizado, com atenção a cada detalhe.</p>
+            </div>
+        </section>
+        <section class="etapas-agendamento">
+            <ol>
+                <li>
+                    <span class="numero-etapa">1</span>
+                    <span>Serviço</span>
+                </li>
+                <li>
+                    <span class="numero-etapa">2</span>
+                    <span>Profissional</span>
+                </li>
+                <li>
+                    <span class="numero-etapa">3</span>
+                    <span>Dados e Horário</span>
+                </li>
+            </ol>
+        </section>
+        <form>
+            <section class="selecao-servico">
+                <fieldset>
+                    <legend>Escolha o serviço desejado:</legend>
+                    <div>
+                        <input id="servico-tatuagem" name="servico-escolha" type="radio" value="tatuagem" required>
+                        <label for="servico-tatuagem">Tatuagem</label>
+                    </div>
+                    <div>
+                        <input id="servico-piercing" name="servico-escolha" type="radio" value="piercing">
+                        <label for="servico-piercing">Piercing</label>
+                    </div>
+                    <div>
+                        <input id="personalizar-projeto" name="servico-escolha" type="radio" value="projeto-personalizado">
+                        <label for="personalizar-projeto">Projeto Personalizado</label>
+                    </div>
+                </fieldset>
+            </section>
+            <section id="selecao-profissional">
+                <h2>Escolha seu Profissional</h2>
+                <div class="grupo-tatuagem">
+                    <label>
+                        <article class="profissional-card">
+                            <img src="../media/images/tatuadora.jpg" alt="Tatuadora de cabelos castanhos presos, com os braços tatuados, utilizando máscara e luvas enquanto realiza uma tatuagem em um cliente.">
+                            <h3>Patrícia Lemos</h3>
+                            <p>Atua na criação de tatuagens personalizadas, explorando diferentes composições artísticas e técnicas para transformar referências em trabalhos exclusivos.</p>
+                            <p>Dedica-se à arte da tatuagem, valorizando a precisão dos traços, a atenção aos detalhes e o cuidado com a organização do ambiente de trabalho.</p>
+                            <input type="radio" name="profissional-escolha" id="patricia-lemos" value="tatuadora" required>
+                        </article>
+                    </label>
+                    <label>
+                        <article class="profissional-card">
+                            <img src="../media/images/tatuador.jpg" alt="Tatuador de barba e cabelos castanhos claros, usando óculos, realizando uma tatuagem no estilo Old School no braço de um cliente.">
+                            <h3>Rodrigo Freitas</h3>
+                            <p>Especializado em tatuagens no estilo Old School, com composições marcantes, contornos definidos e elementos tradicionais da arte clássica da tatuagem.</p>
+                            <p>Dedica-se à arte da tatuagem, buscando unir referências tradicionais, precisão nos traços e personalidade em cada criação.</p>
+                            <input type="radio" name="profissional-escolha" id="rodrigo-freitas" value="tatuador">
+                        </article>
+                    </label>
+                </div>
+                <div class="grupo-piercing">
+                    <label>
+                        <article class="profissional-card">
+                            <img src="../media/images/body-piercing-mulher.jpg" alt="Profissional de piercing utilizando luvas e máscara de proteção durante um atendimento de perfuração labial.">
+                            <h3>Vanessa Lima</h3>
+                            <p>Especialista em piercings e perfurações faciais, com destaque para piercings labiais e composições de joias para diferentes estilos.</p>
+                            <p>Dedica-se à área de body piercing, valorizando a atenção aos detalhes, o atendimento individualizado e o cuidado em cada trabalho.</p>
+                            <input type="radio" name="profissional-escolha" id="vanessa-lima" value="face-piercing">
+                        </article>
+                    </label>
+                    <label>
+                        <article class="profissional-card">
+                            <img src="../media/images/body-piercing-homem.png" alt="Piercer de cabelos castanhos claros e aparência despojada, utilizando luvas e máscara durante uma perfuração auricular.">
+                            <h3>Fábio Menezes</h3>
+                            <p>Atua com piercings auriculares, explorando diferentes posições e combinações de joias para criar composições personalizadas.</p>
+                            <p>Dedica-se à arte do body piercing, valorizando a precisão, a atenção aos detalhes e o atendimento individualizado em cada procedimento.</p>
+                            <input type="radio" name="profissional-escolha" id="fabio-menezes" value="ear-piercing">
+                        </article>
+                    </label>
+                </div>
+                <label for="sem-preferencia">
+                    <input type="radio" name="profissional-escolha" id="sem-preferencia" value="escolha-empresa">
+                    Sem preferência - Escolha por mim.
+                </label>
+            </section>
+            <section class="dados-cliente">
+                <h2>Dados Pessoais e Preferências</h2>
+                <fieldset>
+                    <legend>Seus dados:</legend>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" maxlength="100" placeholder="Nome Completo" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+
+                    <label for="telefone">Telefone (com DDD):</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        pattern="[0-9]{2}9[0-9]{4}[0-9]{4}"
+                        placeholder="11999999999"
+                        required
+                        title="Digite apenas números, incluindo o DDD. Ex.: 11999999999"
+                    >
+                    <label for="data">Data desejada:</label>
+                    <input
+                        type="date"
+                        id="data"
+                        name="agendamento"
+                        min="2026-11-10"
+                        max="2026-12-31"
+                        value="2026-11-10"
+                        required
+                    >
+
+                    <label for="horario">Horário desejado:</label>
+                    <select id="horario" name="horario-agendamento" required>
+                        <option value="" selected disabled>Selecione um horário.</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                    </select>
+                    <label for="mensagem">Observações adicionais (opcional):</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Observações" maxlength="500"></textarea>
+                </fieldset>
+                <button type="submit">Enviar Solicitação</button>
+            </section>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2026 NOIR INK Studio. Todos os direitos reservados.</p>
+        <a href="contato.html">Contato</a>
+    </footer>
+</body>
+</html>
