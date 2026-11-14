@@ -1,435 +1,481 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :root {
-    --background-color: #0A0A0A;
-    --surface-color: #1C1C1C;
-    --border-color: #555555;
-    --text-color: #F5F5F5;
-    --secondary-text-color: #D1D1D1;
-    --gold-color: #D4AF37;
+	--background-color: #0A0A0A;
+	--surface-color: #1C1C1C;
+	--border-color: #555555;
+	--text-color: #F5F5F5;
+	--secondary-text-color: #D1D1D1;
+	--gold-color: #D4AF37;
 }
 
 body {
-    margin: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: Arial, sans-serif;
+	margin: 0;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+	line-height: 1.6;
+}
+
+h1, h2 {
+	font-family: 'Cinzel', serif;
+	font-weight: 500;
+	letter-spacing: 1.5px;
 }
 
 h1 {
-    color: var(--gold-color);
-    font-size: 2.5rem;
-    margin: 0;
-    text-transform: uppercase;
-    font-family: 'Cinzel', serif;
-    font-weight: 500;
-    letter-spacing: 3px;
+	color: var(--gold-color);
+	font-size: 2.5rem;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+section {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 48px 24px;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    padding: 8px 16px;
-    background-color: var(--surface-color);
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0;
+	padding: 8px 16px;
+	background-color: var(--surface-color);
+	flex-wrap: wrap;
 }
 
 nav a {
-    color: var(--secondary-text-color);
-    text-decoration: none;
-    padding: 8px 50px;
-    position: relative;
-    isolation: isolate;
-    flex-shrink: 0;
-    transition: background-color 0.3s;
+	color: var(--secondary-text-color);
+	text-decoration: none;
+	padding: 8px 28px;
+	position: relative;
+	isolation: isolate;
+	flex-shrink: 0;
+	transition: color 0.3s ease;
+	font-size: 0.95rem;
 }
 
 nav a:focus-visible {
-    outline: 3px solid var(--gold-color);
-    outline-offset: -2px;
-    border-radius: 8px;
+	outline: 3px solid var(--gold-color);
+	outline-offset: -2px;
+	border-radius: 8px;
 }
 
 nav a[aria-current="page"] {
-    color: var(--gold-color);
+	color: var(--gold-color);
 }
 
-
 nav a[aria-current="page"]::before {
-    content: '';
-    position: absolute;
-    width: 35%;
-    height: 2px;
-    background-color: var(--gold-color);
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+	content: '';
+	position: absolute;
+	width: 35%;
+	height: 2px;
+	background-color: var(--gold-color);
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 }
 
 nav a:hover {
-    color: var(--gold-color);
+	color: var(--gold-color);
 }
 
 nav a::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 20px;
-    width: 1px;
-    background-color: var(--gold-color);
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 20px;
+	width: 1px;
+	background-color: var(--gold-color);
 }
 
 nav a:last-child::after {
-    display: none;
+	display: none;
 }
 
 .header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2px 24px;
-    border-bottom: 3px solid var(--gold-color);
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2px 24px;
+	border-bottom: 3px solid var(--gold-color);
+	flex-wrap: wrap;
 }
 
 .header-top p {
-    margin: 0;
-    color: var(--secondary-text-color);
-    font-size: 0.85rem;
-    letter-spacing: 2px;
+	margin: 0;
+	color: var(--secondary-text-color);
+	font-size: 0.85rem;
+	letter-spacing: 2px;
 }
 
 .header-top .gold-text {
-    color: var(--gold-color);
+	color: var(--gold-color);
 }
 
 header {
-    background-color: var(--background-color);
-    padding: 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+	background-color: var(--background-color);
+	padding: 0;
+	text-align: center;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
 }
 
 main {
-    padding: 0 24px;
+	padding: 0;
 }
 
 h2 {
-    font-size: 30px;
-    color: var(--gold-color);
-    text-align: left;
+	font-size: 2rem;
+	color: var(--gold-color);
+	text-align: left;
+	margin-top: 0;
+	margin-bottom: 16px;
 }
 
 h3 {
-    font-size: 22px;
-    color: var(--gold-color);
-    text-align: left;
+	font-size: 1.35rem;
+	color: var(--gold-color);
+	text-align: left;
+	font-weight: 500;
 }
 
 #apresentacao-estudio {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    gap: 24px;
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	gap: 40px;
 }
 
 #apresentacao-estudio p {
-    text-align: justify;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+	color: var(--secondary-text-color);
+	text-align: left;
+	margin: 0;
 }
 
 #apresentacao-estudio .apresentacao-imagem {
-    margin-top: 24px;
-    flex-basis: 60%;
-    max-width: 55%;
-    border-radius: 10px;
+	flex: 1;
+	max-width: 55%;
+	border-radius: 8px;
+	display: block;
 }
 
 .apresentacao-background {
-    flex-grow: 5;
-    flex-basis: 60%;
+	flex: 1;
 }
 
 #recepcao {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
+	gap: 40px;
 }
 
 #recepcao p {
-    text-align: justify;
-    max-width: 90%;
+	color: var(--secondary-text-color);
+	text-align: left;
+	margin: 0;
 }
 
 #recepcao .recepcao-imagem {
-    margin-top: 24px;
-    flex-basis: 60%;
-    max-width: 55%;
-    border-radius: 10px;
-    height: 400px;
-    object-fit: cover;
-
+	flex: 1;
+	max-width: 55%;
+	border-radius: 8px;
+	height: 400px;
+	object-fit: cover;
+	display: block;
 }
 
 .recepcao-background {
-    flex-grow: 5;
-    flex-basis: 60%;
+	flex: 1;
 }
 
 #ambientes-tatuagem-description {
-    text-align: justify;
-    max-width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 10px;
+	color: var(--secondary-text-color);
+	text-align: left;
+	max-width: 850px;
+	margin: 0 0 28px 0;
 }
 
 .ambientes-tatuagem-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 24px;
 }
 
 .ambiente-tatuagem {
-    background-color: var(--surface-color);
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-    padding: 24px;
+	background-color: var(--surface-color);
+	border-radius: 8px;
+	border: 1px solid var(--border-color);
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
 }
 
 .ambiente-tatuagem h3 {
-    margin-top: 0;
-    margin-bottom: 8px;
+	margin-top: 0;
+	margin-bottom: 10px;
 }
 
 .ambiente-tatuagem p {
-    color: var(--secondary-text-color);
-    line-height: 1.3;
-    text-align: justify;
+	color: var(--secondary-text-color);
+	text-align: left;
+	margin-top: 0;
+	margin-bottom: 20px;
 }
 
 .ambiente-tatuagem img {
-    border-radius: 10px;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+	border-radius: 6px;
+	width: 100%;
+	height: 320px;
+	object-fit: cover;
+	margin-top: auto;
 }
 
 #ambientes-piercing {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    gap: 24px;
-    margin-top: 24px;
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	gap: 40px;
+}
+
+.ambientes-piercing-background {
+	flex: 1;
 }
 
 #ambientes-piercing p {
-    text-align: justify;
-    color: var(--secondary-text-color);
-    line-height: 1.3;
+	text-align: left;
+	color: var(--secondary-text-color);
+	margin: 0;
 }
 
 .ambientes-piercing-imagem {
-    max-width: 55%;
-    width: 55%;
-    height: 420px;
-    object-fit: cover;
-    object-position: bottom;
-    flex-shrink: 0;
-    border-radius: 10px;
+	max-width: 55%;
+	width: 55%;
+	height: 420px;
+	object-fit: cover;
+	object-position: bottom;
+	flex-shrink: 0;
+	border-radius: 8px;
+	display: block;
 }
 
 #exposicao-artistica h2,
 #exposicao-artistica p {
-    text-align: center;
-    max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+	text-align: center;
+	max-width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#exposicao-artistica p {
+	color: var(--secondary-text-color);
+	margin-bottom: 32px;
 }
 
 .exposicao-artistica-imagem {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 10px;
+	width: 100%;
+	height: 460px;
+	object-fit: cover;
+	border-radius: 8px;
+	display: block;
 }
 
 #exposicao-joias {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin-top: 24px;
+	display: flex;
+	align-items: center;
+	gap: 40px;
 }
 
 .exposicao-joias-background {
-    flex-basis: 45%;
-    text-align: justify;
-    color: var(--secondary-text-color);
+	flex: 1;
+	text-align: left;
+	color: var(--secondary-text-color);
+}
+
+.exposicao-joias-background p {
+	margin: 0;
 }
 
 .exposicao-joias-imagem {
-    width: 55%;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 2px solid var(--gold-color);
-    box-shadow: 0 0 12px var(--gold-color);
+	width: 55%;
+	height: 440px;
+	object-fit: cover;
+	border-radius: 8px;
+	border: 2px solid var(--gold-color);
+	box-shadow: 0 0 14px rgba(212, 175, 55, 0.45);
+	display: block;
 }
 
 #conhecer-estudio {
-    text-align: center;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    background-color: var(--surface-color);
-    padding: 10px;
-    border-radius: 10px;
+	text-align: center;
+	margin-top: 24px;
+	margin-bottom: 48px;
+	background-color: var(--surface-color);
+	padding: 40px 24px;
+	border-radius: 8px;
+	border: 1px solid var(--border-color);
 }
 
 #conhecer-estudio h2 {
-    margin-top: 8px;
-    margin-bottom: 8px;
-    text-align: center;
+	margin-top: 0;
+	margin-bottom: 12px;
+	text-align: center;
+}
+
+#conhecer-estudio p {
+	color: var(--secondary-text-color);
+	max-width: 700px;
+	margin: 0 auto 24px auto;
 }
 
 .btn {
-    background-color: var(--gold-color);
-    color: var(--background-color);
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    display: inline-block;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-
+	background-color: var(--gold-color);
+	color: var(--background-color);
+	font-weight: 600;
+	text-decoration: none;
+	padding: 12px 28px;
+	border-radius: 4px;
+	cursor: pointer;
+	display: inline-block;
+	transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-    background-color: var(--border-color);
-    transform: translateY(-3px);
+	background-color: #E5C158;
+	transform: translateY(-2px);
 }
 
 .btn:focus-visible {
-    outline: 2px solid var(--gold-color);
-    outline-offset: 3px;
+	outline: 2px solid var(--gold-color);
+	outline-offset: 3px;
 }
 
 .btn:active {
-    transform: scale(0.95);
+	transform: scale(0.95);
 }
 
 footer {
-    background-color: var(--surface-color);
-    padding: 4px 24px;
-    text-align: center;
-    border-top: 1px solid var(--border-color);
+	background-color: var(--surface-color);
+	padding: 24px;
+	text-align: center;
+	border-top: 1px solid var(--border-color);
+	margin-top: 24px;
 }
 
 footer p {
-    color: var(--secondary-text-color);
-    margin: 0 0 2px;
+	color: var(--secondary-text-color);
+	margin: 0 0 4px;
 }
 
 footer a {
-    color: var(--gold-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
+	color: var(--gold-color);
+	text-decoration: none;
+	transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: var(--text-color);
+	color: var(--text-color);
 }
 
-footer a:focus {
-    outline: 2px solid var(--gold-color);
-    border-radius: 4px;
-    outline-offset: 2px;
+footer a:focus-visible {
+	outline: 2px solid var(--gold-color);
+	border-radius: 4px;
+	outline-offset: 2px;
 }
 
 @media (max-width: 768px) {
-    nav a {
-        padding: 8px 10px;
-    }
-    nav a::after {
-        display: none;
-    }
-    h1 {
-        font-size: 2rem;
-    }
-    .header-top p {
-        font-size: 0.7rem;
-        letter-spacing: 1px;
-    }
-    h2 {
-        font-size: 26px;
-    }
-    h3 {
-        font-size: 18px;
-    }
-    p {
-        font-size: 0.9rem;
-        line-height: 1.3;
-    }
-    #apresentacao-estudio,
-    #recepcao {
-        flex-direction: column;
-    }
-    #apresentacao-estudio .apresentacao-imagem{
-        margin: 0;
-    }
-    #apresentacao-estudio .apresentacao-imagem,
-    #recepcao p {
-        max-width: 100%;
-    }
-    #recepcao .recepcao-imagem {
-        width: 100%;
-        max-width: 100%;
-        flex-basis: auto;
-    }
-    .ambientes-tatuagem-container {
-        grid-template-columns: 1fr;
-    }
-    #ambientes-piercing {
-        flex-direction: column;
-    }
-    .ambientes-piercing-imagem {
-        width: 100%;
-        max-width: 100%;
-        flex-basis: auto;
-    }
-    #exposicao-artistica h2,
-    #exposicao-artistica p {
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #exposicao-joias {
-        flex-direction: column;
-    }
-    #exposicao-joias h2{
-        margin: 0;
-    }
-    .exposicao-joias-imagem {
-        width: 100%;
-        max-width: 100%;
-        flex-basis: auto;
-    }
-    #exposicao-artistica p {
-        margin-bottom: 16px;
-    }
-    .exposicao-artistica-imagem {
-        display: block;
-        margin-top: 0;
-        margin-bottom: 0;
-        height: 280px;
-    }
+	header {
+		position: static;
+	}
+	.header-top {
+		flex-direction: column;
+		gap: 4px;
+		padding: 10px 12px;
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	.header-top p {
+		font-size: 0.7rem;
+		letter-spacing: 1px;
+	}
+	nav {
+		padding: 8px 12px;
+		gap: 4px 8px;
+	}
+	nav a {
+		padding: 6px 10px;
+		font-size: 0.9rem;
+	}
+	nav a::after {
+		display: none;
+	}
+	section {
+		padding: 36px 16px;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+	h3 {
+		font-size: 1.15rem;
+	}
+	p {
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+	#apresentacao-estudio,
+	#recepcao,
+	#ambientes-piercing,
+	#exposicao-joias {
+		flex-direction: column;
+		gap: 24px;
+	}
+	#apresentacao-estudio .apresentacao-imagem,
+	#recepcao .recepcao-imagem,
+	.ambientes-piercing-imagem,
+	.exposicao-joias-imagem {
+		width: 100%;
+		max-width: 100%;
+		height: 260px;
+		margin: 0;
+		flex-basis: auto;
+	}
+	#recepcao p {
+		max-width: 100%;
+	}
+	.ambientes-tatuagem-container {
+		grid-template-columns: 1fr;
+	}
+	.ambiente-tatuagem img {
+		height: 240px;
+	}
+	#exposicao-artistica h2,
+	#exposicao-artistica p {
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#exposicao-artistica p {
+		margin-bottom: 20px;
+	}
+	.exposicao-artistica-imagem {
+		height: 260px;
+	}
+	#exposicao-joias h2 {
+		margin-top: 0;
+	}
+	#conhecer-estudio {
+		margin-left: 16px;
+		margin-right: 16px;
+		padding: 32px 16px;
+	}
 }
