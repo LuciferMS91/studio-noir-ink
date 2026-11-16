@@ -159,3 +159,10 @@ footer a:focus-visible {
 	border-radius: 4px;
 	outline-offset: 2px;
 }
+
+@media (max-width: 768px) {
+
+	nav a::after {
+		display: none;
+	}
+}
