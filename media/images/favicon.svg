@@ -1,0 +1,5 @@
+<svg xmlns="http://w3.org" viewBox="0 0 64 64">
+	<rect width="64" height="64" rx="12" fill="#0A0A0A"/>
+	<rect x="3" y="3" width="58" height="58" rx="9" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+	<text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="#D4AF37" font-family="Georgia, serif" font-size="28" font-weight="bold" letter-spacing="1">NI</text>
+</svg>
