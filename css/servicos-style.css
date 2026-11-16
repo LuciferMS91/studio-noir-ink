@@ -1,130 +1,12 @@
-* {
-	box-sizing: border-box;
-}
-
-:root {
-	--background-color: #0A0A0A;
-	--surface-color: #1C1C1C;
-	--border-color: #555555;
-	--text-color: #F5F5F5;
-	--secondary-text-color: #D1D1D1;
-	--gold-color: #D4AF37;
-}
-
-body {
-	margin: 0;
-	background-color: var(--background-color);
-	color: var(--text-color);
-	font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-	line-height: 1.6;
-}
-
-h1, h2, #orcamento-title {
+/* =========================================
+   BASE DO CONTEÚDO E BOTÕES UNIFICADOS
+   ========================================= */
+#orcamento-title {
 	font-family: 'Cinzel', serif;
 	font-weight: 500;
 	letter-spacing: 1.5px;
 }
 
-h1 {
-	color: var(--gold-color);
-	font-size: 2.5rem;
-	margin: 0;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-}
-
-nav {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 0;
-	padding: 8px 16px;
-	background-color: var(--surface-color);
-	flex-wrap: wrap;
-}
-
-nav a {
-	color: var(--secondary-text-color);
-	text-decoration: none;
-	padding: 8px 28px;
-	position: relative;
-	isolation: isolate;
-	flex-shrink: 0;
-	transition: color 0.3s ease;
-	font-size: 0.95rem;
-}
-
-nav a:focus-visible {
-	outline: 3px solid var(--gold-color);
-	outline-offset: -2px;
-	border-radius: 8px;
-}
-
-nav a[aria-current="page"] {
-	color: var(--gold-color);
-}
-
-nav a[aria-current="page"]::before {
-	content: '';
-	position: absolute;
-	width: 35%;
-	height: 2px;
-	background-color: var(--gold-color);
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-}
-
-nav a:hover {
-	color: var(--gold-color);
-}
-
-nav a::after {
-	content: '';
-	position: absolute;
-	right: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	height: 20px;
-	width: 1px;
-	background-color: var(--gold-color);
-}
-
-nav a:last-child::after {
-	display: none;
-}
-
-.header-top {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 2px 24px;
-	border-bottom: 3px solid var(--gold-color);
-	flex-wrap: wrap;
-}
-
-.header-top p {
-	margin: 0;
-	color: var(--secondary-text-color);
-	font-size: 0.85rem;
-	letter-spacing: 2px;
-}
-
-.header-top .gold-text {
-	color: var(--gold-color);
-}
-
-header {
-	background-color: var(--background-color);
-	padding: 0;
-	text-align: center;
-	position: sticky;
-	top: 0;
-	z-index: 1000;
-}
-
-/* Estilo Unificado para todos os Botões da Página */
 .btn-servico,
 .btn-orcamento {
 	display: inline-flex;
@@ -159,7 +41,9 @@ header {
 	transform: scale(0.95);
 }
 
-/* Banners de Tatuagem e Piercing */
+/* =========================================
+   1. BANNERS DE TATUAGEM E PIERCING
+   ========================================= */
 .servicos-tatuagem {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../media/images/fundo-tatuagem.jpg');
 	background-position: center;
@@ -200,7 +84,9 @@ header {
 	margin-bottom: 24px;
 }
 
-/* Projetos Personalizados */
+/* =========================================
+   2. PROJETOS PERSONALIZADOS
+   ========================================= */
 .projetos-personalizados {
 	text-align: center;
 	max-width: 750px;
@@ -221,7 +107,9 @@ header {
 	margin-bottom: 28px;
 }
 
-/* Catálogo de Insumos */
+/* =========================================
+   3. CATÁLOGO DE INSUMOS E CARROSSEL
+   ========================================= */
 .catalogo-insumos {
 	border-top: 1px solid var(--gold-color);
 	max-width: 1280px;
@@ -326,47 +214,6 @@ header {
 	margin-top: 24px;
 }
 
-.navegacao-carrossel {
-	display: flex;
-	gap: 12px;
-	justify-content: center;
-	margin: 0 auto;
-	background-color: transparent;
-	width: 100%;
-}
-
-.navegacao-carrossel a {
-	color: var(--gold-color);
-	border-radius: 8px;
-	position: relative;
-	padding: 6px 14px;
-}
-
-.navegacao-carrossel a::before {
-	content: '';
-	position: absolute;
-	width: 40%;
-	height: 2px;
-	background-color: var(--gold-color);
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	opacity: 0;
-}
-
-.catalogo-carrossel:not(:has(.grupo-produtos:target)) .navegacao-carrossel a[href="#grupo-produtos-1"]::before,
-.catalogo-carrossel:has(#grupo-produtos-1:target) .navegacao-carrossel a[href="#grupo-produtos-1"]::before,
-.catalogo-carrossel:has(#grupo-produtos-2:target) .navegacao-carrossel a[href="#grupo-produtos-2"]::before,
-.catalogo-carrossel:has(#grupo-produtos-3:target) .navegacao-carrossel a[href="#grupo-produtos-3"]::before,
-.catalogo-carrossel:has(#grupo-produtos-4:target) .navegacao-carrossel a[href="#grupo-produtos-4"]::before {
-	opacity: 1;
-}
-
-.navegacao-carrossel a::after {
-	display: none;
-}
-
 .setas-carrossel {
 	position: absolute;
 	top: 50%;
@@ -410,7 +257,50 @@ header {
 	transform: scale(0.95);
 }
 
-/* Chamada Final de Orçamento */
+.navegacao-carrossel {
+	display: flex;
+	gap: 12px;
+	justify-content: center;
+	margin: 0 auto;
+	background-color: transparent;
+	width: 100%;
+}
+
+.navegacao-carrossel a {
+	color: var(--gold-color);
+	border-radius: 8px;
+	position: relative;
+	padding: 6px 14px;
+}
+
+.navegacao-carrossel a::before {
+	content: '';
+	position: absolute;
+	width: 40%;
+	height: 2px;
+	background-color: var(--gold-color);
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	opacity: 0;
+}
+
+.catalogo-carrossel:not(:has(.grupo-produtos:target)) .navegacao-carrossel a[href="#grupo-produtos-1"]::before,
+.catalogo-carrossel:has(#grupo-produtos-1:target) .navegacao-carrossel a[href="#grupo-produtos-1"]::before,
+.catalogo-carrossel:has(#grupo-produtos-2:target) .navegacao-carrossel a[href="#grupo-produtos-2"]::before,
+.catalogo-carrossel:has(#grupo-produtos-3:target) .navegacao-carrossel a[href="#grupo-produtos-3"]::before,
+.catalogo-carrossel:has(#grupo-produtos-4:target) .navegacao-carrossel a[href="#grupo-produtos-4"]::before {
+	opacity: 1;
+}
+
+.navegacao-carrossel a::after {
+	display: none;
+}
+
+/* =========================================
+   4. CHAMADA FINAL DE ORÇAMENTO
+   ========================================= */
 .catalogo-orcamento {
 	max-width: 750px;
 	text-align: center;
@@ -430,62 +320,10 @@ header {
 	margin: 0 auto 24px auto;
 }
 
-footer {
-	background-color: var(--surface-color);
-	padding: 24px;
-	text-align: center;
-	border-top: 1px solid var(--border-color);
-	margin-top: 24px;
-}
-
-footer p {
-	color: var(--secondary-text-color);
-	margin: 0 0 4px;
-}
-
-footer a {
-	color: var(--gold-color);
-	text-decoration: none;
-	transition: color 0.3s ease;
-}
-
-footer a:hover {
-	color: var(--text-color);
-}
-
-footer a:focus-visible {
-	outline: 2px solid var(--gold-color);
-	border-radius: 4px;
-	outline-offset: 2px;
-}
-
+/* =========================================
+   RESPONSIVIDADE DA PÁGINA SERVIÇOS (MOBILE)
+   ========================================= */
 @media (max-width: 768px) {
-	header {
-		position: static;
-	}
-	.header-top {
-		flex-direction: column;
-		gap: 4px;
-		padding: 10px 12px;
-	}
-	h1 {
-		font-size: 2rem;
-	}
-	.header-top p {
-		font-size: 0.7rem;
-		letter-spacing: 1px;
-	}
-	nav {
-		padding: 8px 12px;
-		gap: 4px 8px;
-	}
-	nav a {
-		padding: 6px 10px;
-		font-size: 0.9rem;
-	}
-	nav a::after {
-		display: none;
-	}
 	.servicos-tatuagem,
 	.servicos-piercing {
 		min-height: 360px;
@@ -512,6 +350,9 @@ footer a:focus-visible {
 	.catalogo-insumos {
 		padding: 36px 16px;
 	}
+	.catalogo-carrossel {
+		padding: 0;
+	}
 	.grupo-produtos {
 		flex-wrap: wrap;
 		row-gap: 24px;
@@ -522,6 +363,15 @@ footer a:focus-visible {
 	}
 	.produto-card img {
 		height: 220px;
+	}
+	.controles-carrossel {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		flex-basis: 100%;
+		margin-top: 16px;
+		flex-wrap: nowrap;
 	}
 	.setas-carrossel {
 		position: static;
@@ -537,15 +387,6 @@ footer a:focus-visible {
 	.setas-carrossel a {
 		width: 34px;
 	}
-	.controles-carrossel {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		flex-basis: 100%;
-		margin-top: 16px;
-		flex-wrap: nowrap;
-	}
 	.navegacao-carrossel {
 		display: flex;
 		width: auto;
@@ -555,8 +396,5 @@ footer a:focus-visible {
 		flex-wrap: nowrap;
 		flex-shrink: 0;
 		white-space: nowrap;
-	}
-	.catalogo-carrossel {
-		padding: 0;
 	}
 }
