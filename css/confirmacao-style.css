@@ -1,0 +1,111 @@
+/* =========================================
+   SEÇÃO DE CONFIRMAÇÃO DE ENVIO
+   ========================================= */
+.confirmacao-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 60vh;
+}
+
+.confirmacao-card {
+	background-color: var(--surface-color);
+	border: 1px solid var(--gold-color);
+	border-radius: 8px;
+	padding: 48px 32px;
+	max-width: 650px;
+	width: 100%;
+	text-align: center;
+	box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+.confirmacao-icone {
+	color: var(--gold-color);
+	margin-bottom: 16px;
+}
+
+.confirmacao-card h2 {
+	color: var(--gold-color);
+	font-size: 2rem;
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.confirmacao-card p {
+	color: var(--secondary-text-color);
+	margin: 0 auto 32px auto;
+	max-width: 520px;
+}
+
+.confirmacao-acoes {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.btn-primario,
+.btn-secundario {
+	display: inline-block;
+	text-decoration: none;
+	font-weight: 600;
+	padding: 12px 28px;
+	border-radius: 4px;
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primario {
+	background-color: var(--gold-color);
+	color: var(--background-color);
+}
+
+.btn-primario:hover {
+	background-color: #E5C158;
+	transform: translateY(-2px);
+}
+
+.btn-secundario {
+	border: 1px solid var(--gold-color);
+	color: var(--gold-color);
+	background-color: transparent;
+}
+
+.btn-secundario:hover {
+	background-color: var(--gold-color);
+	color: var(--background-color);
+	transform: translateY(-2px);
+}
+
+.btn-primario:focus-visible,
+.btn-secundario:focus-visible {
+	outline: 2px solid var(--gold-color);
+	outline-offset: 3px;
+}
+
+.btn-primario:active,
+.btn-secundario:active {
+	transform: scale(0.95);
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================= */
+@media (max-width: 768px) {
+	.confirmacao-card {
+		padding: 32px 20px;
+	}
+	.confirmacao-card h2 {
+		font-size: 1.5rem;
+	}
+	.confirmacao-card p {
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+	.confirmacao-acoes {
+		flex-direction: column;
+	}
+	.btn-primario,
+	.btn-secundario {
+		width: 100%;
+	}
+}
